@@ -1,0 +1,49 @@
+@font-face {
+  font-family: "NewYorkExtraLarge-Medium";
+  src: url(./assets/appleFonts/NewYorkExtraLarge-Medium.otf);
+}
+@font-face {
+  font-family: "SF-Compact-Display-Bold";
+  src: url(./assets/appleFonts/SF-Compact-Display-Bold.otf);
+}
+@font-face {
+  font-family: "SF-Compact-Text-Heavy";
+  src: url(./assets/appleFonts/SF-Compact-Text-Heavy.otf);
+}
+@font-face {
+  font-family: "SF-Compact-Rounded-Light";
+  src: url(./assets/appleFonts/SF-Compact-Rounded-Light.otf);
+}
+@font-face {
+  font-family: "SF-Mono-LightItalic";
+  src: url(./assets/appleFonts/SF-Mono-LightItalic.otf);
+}
+@font-face {
+  font-family: "SF-Pro-Display-Medium";
+  src: url(./assets/appleFonts/SF-Pro-Display-Medium.otf);
+}
+@font-face {
+  font-family: "SF-Pro-Rounded-Regular";
+  src: url(./assets/appleFonts/SF-Pro-Rounded-Regular.otf);
+}
+@font-face {
+  font-family: "SF-Pro-Text-Thin";
+  src: url(./assets/appleFonts/SF-Pro-Text-Thin.otf);
+}
+@font-face {
+  font-family: "NewYorkSmall-Semibold";
+  src: url(./assets/appleFonts/NewYorkSmall-Semibold.otf);
+}
+@font-face {
+  font-family: "SF-Pro-Display-Ultralight";
+  src: url(./assets/appleFonts/SF-Pro-Display-Ultralight.otf);
+}
+
+body{
+  flex: 0;
+}
+#root{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
