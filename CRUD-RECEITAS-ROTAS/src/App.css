@@ -26,3 +26,8 @@
     font-family: "SF-Mono-Heavy";
     src: url(./assets/appleFonts/SF-Mono-Heavy.otf);
 }
+
+* div{
+    display: flexbox;
+    flex-direction: column;
+}

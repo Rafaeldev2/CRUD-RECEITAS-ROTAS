@@ -34,17 +34,14 @@ const Home = () => {
     receitas.nome.toLowerCase().includes(searchQuery.toLowerCase())
   )
 
-
   return (
     <>
-      <div className="search-bar">
-        <CustomInput
-          placeholder="Pesquisar receitas"
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
-        />
-      </div>
       <div className="recipe-list">
+          <CustomInput
+            placeholder="Pesquisar receitas"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+          />
           {receitasFiltradas.map((receitas, index) => (
             <ProductCard 
               key={index} 

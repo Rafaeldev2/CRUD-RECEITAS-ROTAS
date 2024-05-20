@@ -1,16 +1,18 @@
-.search-bar{
+.recipe-list{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
 }
-.search-bar input{
+.recipe-list input{
     background-color: grey;
-    height: 18px;
-    width: 100%;
+    height: 17px;
+    width: 160px;
     border-radius: 7px;
     border: solid 1px black;
+    text-indent: 5%;
 }
-.search-bar ::placeholder{
+.recipe-list ::placeholder{
     color: black;
     font-family: SF-Pro-Rounded-Thin;
-    padding: 9px;
 }
