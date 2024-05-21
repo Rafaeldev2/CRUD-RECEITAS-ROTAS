@@ -1,2 +1,2 @@
 # CRUD-RECEITAS-ROTAS
-Atualizações do crud de receitas juntamente com as rotas
+Mais projetos de estudos usando agora, um CRUD de Receitas com Rotas

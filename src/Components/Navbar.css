@@ -1,0 +1,13 @@
+.navlink{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 8px;
+    padding: 5px;
+    border: solid 2px black;
+    border-radius: 10px;
+}
+.navlink :link{
+    font-size: larger;
+    font-family: "SF-Pro-Display-Medium";
+}
