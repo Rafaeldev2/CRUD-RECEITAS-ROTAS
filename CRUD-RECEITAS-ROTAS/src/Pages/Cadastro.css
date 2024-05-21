@@ -1,0 +1,45 @@
+.all-forms{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: grey;
+}
+.add-recipe{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+.add-recipe input{
+    width: 15rem;
+    margin: 5px;
+    border: solid 2px black;
+    border-radius: 6px;
+    background-color: darkolivegreen;
+    font-family: SF-Pro-Rounded-Thin;
+}
+.add-recipe ::placeholder{
+    color: rgb(0, 0, 0);
+}
+.add-recipe button{
+    width: 12rem;
+    padding: 0.5rem 1rem;
+    font-family: SF-Pro-Rounded-Thin;
+    font-size: 1rem;
+    color: #fff;
+    background-color: darkolivegreen;
+    border: solid 2px #000000;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.add-recipe button:hover{
+    background-color: #000000;
+    border: 2px solid #fff;
+    transition: all 0.3s ease;
+}
+textarea{
+    flex-wrap: wrap;
+}

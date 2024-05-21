@@ -1,4 +1,5 @@
 import React from 'react';
+import './Cadastro.css'
 import {useContext, useState} from "react";
 import { ReceitasContext } from '../Context/GlobalContext.jsx';
 
@@ -38,7 +39,7 @@ import { ReceitasContext } from '../Context/GlobalContext.jsx';
   return (
 
     <>
-        <div>
+        <div className='all-forms'>
             <h1>Cadastro de Receitas</h1>
               <div className="add-recipe">
                 <input
@@ -54,6 +55,7 @@ import { ReceitasContext } from '../Context/GlobalContext.jsx';
                 onChange={(e) => setTamanhoPorcao(parseInt(e.target.value))}
                 />
                 <textarea
+                rows={5}
                 placeholder="Modo de preparo"
                 value={newInstrucoesReceita}
                 onChange={(e) => setNewInstrucoesReceita(e.target.value)}

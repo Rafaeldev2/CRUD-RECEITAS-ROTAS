@@ -38,12 +38,3 @@
   font-family: "SF-Pro-Display-Ultralight";
   src: url(./assets/appleFonts/SF-Pro-Display-Ultralight.otf);
 }
-
-body{
-  flex: 0;
-}
-#root{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
