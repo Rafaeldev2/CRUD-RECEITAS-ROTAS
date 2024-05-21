@@ -1,13 +1,16 @@
 .navlink{
     display: flex;
     justify-content: center;
-    width: 100%;
+    width: 50%;
     margin: 8px;
     padding: 5px;
+    background-color: darkgoldenrod;
     border: solid 2px black;
     border-radius: 10px;
 }
 .navlink :link{
     font-size: larger;
     font-family: "SF-Pro-Display-Medium";
+    text-decoration-line: none;
+    text-shadow: black;
 }

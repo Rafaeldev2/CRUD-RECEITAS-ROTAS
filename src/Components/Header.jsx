@@ -6,7 +6,7 @@ import './Header.css'
 function Header() {
 
   return (
-    <div className="Receitas">
+    <div className="Minhas-Receitas">
         <h1>Minhas Receitas</h1>
         <NavBar/>
     </div>
