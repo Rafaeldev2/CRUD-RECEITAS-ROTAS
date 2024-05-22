@@ -50,3 +50,7 @@
     font-family: "SF-Pro-Rounded-Thin";
     src: url(./assets/appleFonts/SF-Pro-Rounded-Regular.otf);
   }
+  @font-face {
+    font-family: "SF-Pro-Display-Light";
+    src: url(./assets/appleFonts/SF-Pro-Display-Light.otf);
+  }

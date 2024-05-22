@@ -6,6 +6,9 @@
     height: 100%;
     background-color: grey;
 }
+.all-forms h1{
+    font-family: SF-Pro-Display-Light;
+}
 .add-recipe{
     display: flex;
     flex-direction: column;
