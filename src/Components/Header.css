@@ -1,11 +1,11 @@
-.Minhas-Receitas h1{
-    text-align: center;
-    font-family: "SF-Pro-Display-Medium";
-}
 .Minhas-Receitas{
     display: flex;
     align-items: center;
     flex-direction: column;
     width: 100%;
-    height: 100%;
+    background-color: rgb(192, 113, 56);
+}
+.Minhas-Receitas h1{
+    text-align: center;
+    font-family: "SF-Pro-Display-Medium";
 }

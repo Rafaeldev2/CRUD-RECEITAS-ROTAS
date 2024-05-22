@@ -2,12 +2,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100%;
     width: 100%;
 }
 .recipe-list input{
     background-color: grey;
     height: 17px;
     width: 160px;
+    margin-top: auto;
+    margin-bottom: 600px;
     border-radius: 7px;
     border: solid 1px black;
     text-indent: 5%;
