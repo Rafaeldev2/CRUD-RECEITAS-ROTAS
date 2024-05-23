@@ -1,27 +1,23 @@
-.all-forms{
+.add-recipe{
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     height: 100%;
-    background-color: grey;
+    background-color: rgb(240, 176, 130);
 }
-.all-forms h1{
+.add-recipe h1{
     font-family: SF-Pro-Display-Light;
-}
-.add-recipe{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
+    text-align: center;
 }
 .add-recipe input{
     width: 15rem;
     margin: 5px;
-    border: solid 2px black;
+    border: solid 1px black;
     border-radius: 6px;
     background-color: darkolivegreen;
     font-family: SF-Pro-Display-Medium;
+    text-align: center;
 }
 .add-recipe ::placeholder{
     color: rgb(0, 0, 0);
@@ -43,9 +39,11 @@
     border: 2px solid #fff;
     transition: all 0.3s ease;
 }
-.add-recipe textarea{
-    flex-wrap: wrap;
+.modopreparo{
     resize: none;
+    width: 25%;
+    border-radius: 8px;
+    text-align: justify;
 }
 .add-recipe h4{
     font-family: "SF-Compact-Display-Bold";

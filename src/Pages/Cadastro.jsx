@@ -39,55 +39,54 @@ import { ReceitasContext } from '../Context/GlobalContext.jsx';
   return (
 
     <>
-        <div className='all-forms'>
+        <div className="add-recipe">
             <h1>Cadastro de Receitas</h1>
-              <div className="add-recipe">
-                <input
-                type="text"
-                placeholder="Digite o nome da receita"
-                value={newReceitaTitulo}
-                onChange={(e) => setNewReceitaTitulo(e.target.value)}
-                />
-                <input
-                type="number"
-                placeholder="Porção para quantas pessoas?"
-                value={tamanhoPorcao}
-                onChange={(e) => setTamanhoPorcao(parseInt(e.target.value))}
-                />
-                <textarea
-                rows={5}
-                placeholder="Modo de preparo"
-                value={newInstrucoesReceita}
-                onChange={(e) => setNewInstrucoesReceita(e.target.value)}
-                />
-                  <div>
-                    <h4>Ingredientes:</h4>
-                    {newIngredientesReceita.map((ingredient, index) => (
-                      <div key={index}>
-                        <input
-                          type="text"
-                          placeholder="Nome do ingrediente"
-                          value={ingredient.nome}
-                          onChange={(e) => handleIngredientChange(index, 'nome', e.target.value)}
-                        />
-                        <input
-                          type="number"
-                          placeholder="Quantidade"
-                          value={ingredient.quantidade}
-                          onChange={(e) => handleIngredientChange(index, 'quantidade', e.target.value)}
-                        />
-                        <input
-                          type="text"
-                          placeholder="Unidade"
-                          value={ingredient.unidade}
-                          onChange={(e) => handleIngredientChange(index, 'unidade', e.target.value)}
-                        />
-                      </div>
-                    ))}
-                    <button onClick={addIngredientField}>Adicionar Ingrediente</button>
-                  </div>
-                <button onClick={adicionarReceitas}>Adicionar Receita</button>
-              </div>
+            <input
+            type="text"
+            placeholder="Digite o nome da receita"
+            value={newReceitaTitulo}
+            onChange={(e) => setNewReceitaTitulo(e.target.value)}
+            />
+            <input
+            type="number"
+            placeholder="Porção para quantas pessoas?"
+            value={tamanhoPorcao}
+            onChange={(e) => setTamanhoPorcao(parseInt(e.target.value))}
+            />
+            <textarea
+            className='modopreparo'
+            rows={5}
+            placeholder="Modo de preparo"
+            value={newInstrucoesReceita}
+            onChange={(e) => setNewInstrucoesReceita(e.target.value)}
+            />
+            <div>
+              <h4>Ingredientes:</h4>
+              {newIngredientesReceita.map((ingredient, index) => (
+                <div key={index}>
+                  <input
+                    type="text"
+                    placeholder="Nome do ingrediente"
+                    value={ingredient.nome}
+                    onChange={(e) => handleIngredientChange(index, 'nome', e.target.value)}
+                  />
+                  <input
+                    type="number"
+                    placeholder="Quantidade"
+                    value={ingredient.quantidade}
+                    onChange={(e) => handleIngredientChange(index, 'quantidade', e.target.value)}
+                  />
+                  <input
+                    type="text"
+                    placeholder="Unidade"
+                    value={ingredient.unidade}
+                    onChange={(e) => handleIngredientChange(index, 'unidade', e.target.value)}
+                  />
+                </div>
+              ))}
+              <button onClick={addIngredientField}>Adicionar Ingrediente</button>
+              <button onClick={adicionarReceitas}>Adicionar Receita</button>
+            </div>
         </div>
     </>
   )
