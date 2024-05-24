@@ -17,7 +17,7 @@ const Home = () => {
     setProdutos(atualizarProdutos)
   }
 
-  const fracionarReceita = (index, factor) => {
+    const fracionarReceita = (index, factor) => {
     const atualizarProdutos = [...receitas]
     const receitaAtualizada = { ...atualizarReceitas[index] }
 

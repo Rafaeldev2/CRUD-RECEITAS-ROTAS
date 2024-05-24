@@ -62,6 +62,11 @@ import { ProdutosContext } from '../Context/GlobalContext.jsx';
                   onChange={(e) => setTamanhoPorcao(parseInt(e.target.value))}
                   />
                 </div>
+                {NewProdutos.map((produtos, index) => (
+                <div key={index}>
+                  
+                </div>
+                ))}
                 <button onClick={addProductField}>Adicionar Produto</button>
                 <button onClick={adicionarProdutos}>Adicionar Receita</button>
               </div>
