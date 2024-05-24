@@ -7,7 +7,7 @@ function Header() {
 
   return (
     <div className="Minhas-Receitas">
-        <h1>Minhas Receitas</h1>
+        <h1>BRILHANTE</h1>
         <NavBar/>
     </div>
   )

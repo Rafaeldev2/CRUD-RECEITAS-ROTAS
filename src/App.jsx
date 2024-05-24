@@ -9,11 +9,11 @@ function App() {
   
   return (
     <>
-      <ReceitasContextProvider>
+      <ProdutosContextProvider>
         <Header/>
         <Outlet/>
         <Footer/>
-      </ReceitasContextProvider>
+      </ProdutosContextProvider>
     </>
   );
 }

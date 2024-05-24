@@ -3,9 +3,9 @@
     align-items: center;
     flex-direction: column;
     width: 100%;
-    background-color: rgb(192, 113, 56);
+    background-color: #FFE0FF;
 }
 .Minhas-Receitas h1{
-    text-align: center;
-    font-family: "SF-Pro-Display-Medium";
+    font-family: "NewYorkExtraLarge-Medium";
+    color: rgb(255, 27, 236);
 }

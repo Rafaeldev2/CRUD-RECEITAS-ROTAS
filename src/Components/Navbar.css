@@ -2,9 +2,9 @@
     display: flex;
     justify-content: center;
     width: calc(100% - 2px);
-    background-color: darkgoldenrod;
-    border: solid 1px black;
-    border-radius: 5px;
+    background-color: #FFA8D9;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
     gap: 80px;
 }
 .navlink a{

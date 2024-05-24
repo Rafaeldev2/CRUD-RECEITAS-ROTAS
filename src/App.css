@@ -54,3 +54,7 @@
     font-family: "SF-Pro-Display-Light";
     src: url(./assets/appleFonts/SF-Pro-Display-Light.otf);
   }
+  @font-face {
+    font-family: "NewYorkExtraLarge-Medium";
+    src: url(./assets/appleFonts/NewYorkExtraLarge-Medium.otf);
+  }

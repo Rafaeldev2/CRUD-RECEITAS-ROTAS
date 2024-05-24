@@ -7,7 +7,7 @@ function Navbar() {
   return (
     <nav className='navlink'>
         <Link to="/">Home</Link>
-        <Link to="/Cadastro">Cadastro de Receitas</Link>
+        <Link to="/Cadastro">Cadastro de Produtos</Link>
         <Link to="/LoginForm">Login</Link>
     </nav>
   )

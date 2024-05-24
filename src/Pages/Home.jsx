@@ -1,6 +1,6 @@
 import React, {useState, useContext} from 'react'
 import ProductCard from '../Components/card'
-import { ReceitasContext } from '../Context/GlobalContext'
+import { ProdutosContext } from '../Context/GlobalContext'
 import './Home.css'
 import CustomInput from '../Components/CustomInput'
 
@@ -8,7 +8,7 @@ import CustomInput from '../Components/CustomInput'
 
 
 const Home = () => {
-  const { receitas, setReceitas } = useContext(ReceitasContext)
+  const { receitas, setReceitas } = useContext(ProdutosContext)
   const [searchQuery, setSearchQuery] = useState('')
 
   const deletarReceita = (index) => {

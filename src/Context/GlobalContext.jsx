@@ -1,14 +1,14 @@
 import { createContext, useState } from "react";
 
-export const ReceitasContext = createContext()
+export const ProdutosContext = createContext()
 
-export const ReceitasContextProvider = ( ({children}) => {
-    const [receitas, setReceitas] = useState([])
+export const ProdutosContextProvider = ( ({children}) => {
+    const [produtos, setProdutos] = useState([])
 
     return(
-        <ReceitasContext.Provider value={{receitas, setReceitas}}>
+        <ProdutosContext.Provider value={{produtos, setProdutos}}>
             {children}
-        </ReceitasContext.Provider>
+        </ProdutosContext.Provider>
     )
     }
 )

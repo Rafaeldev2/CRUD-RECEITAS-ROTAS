@@ -5,88 +5,65 @@ import { ReceitasContext } from '../Context/GlobalContext.jsx';
 
 
   function Cadastro() {
-    const { receitas, setReceitas } = useContext(ReceitasContext)
+    const { produtos, setProdutos } = useContext(ProdutosContext)
     const [newReceitaTitulo, setNewReceitaTitulo] = useState('')
-    const [newIngredientesReceita, setNewIngredientesReceita] = useState([{ nome: '', quantidade: '', unidade: '' }])
-    const [newInstrucoesReceita, setNewInstrucoesReceita] = useState('')
+    const [NewProdutos, setNewProdutos] = useState([{ nome: '', quantidade: '', unidade: '' }])
+    const [NewDescriçãoProduto, setNewDescriçãoProduto] = useState('')
     const [tamanhoPorcao, setTamanhoPorcao] = useState(1)
 
-    const handleIngredientChange = (index, field, value) => {
-      const atualizarIngredientes = [...newIngredientesReceita]
-      atualizarIngredientes[index][field] = value
-      setNewIngredientesReceita(atualizarIngredientes)
+    const handleProductChange = (index, field, value) => {
+      const atualizarProdutos = [...NewProdutos]
+      atualizarProdutos[index][field] = value
+      setNewProdutos(atualizarProdutos)
     }
   
-    const addIngredientField = () => {
-      setNewIngredientesReceita([...newIngredientesReceita, { nome: '', quantidade: '', unidade: '' }])
+    const addProductField = () => {
+      setNewProdutos([...NewProdutos, { nome: '', quantidade: '', moeda: '' }])
     }
   
-    const adicionarReceitas = () => {
-      if (newReceitaTitulo.trim() !== '') {
-        const newReceita = {
-          nome: newReceitaTitulo.trim(),
-          ingredientes: newIngredientesReceita,
-          modoDePreparo: newInstrucoesReceita.trim()
+    const adicionarProdutos = () => {
+      if (newProdutoTitulo.trim() !== '') {
+        const NewProdutos = {
+          nome: newProdutoTitulo.trim(),
+          produtos: NewProdutos,
+          descriçãoProduto: NewDescriçãoProduto.trim()
         }
   
-        setReceitas([...receitas, newReceita])
-        setNewReceitaTitulo('')
-        setNewIngredientesReceita([{ nome: '', quantidade: '', unidade: '' }])
-        setNewInstrucoesReceita('')
-        setTamanhoPorcao(1)
+        setProdutos([...setProdutos, NewProdutos])
+        setNewProdutos('')
+        setNewProdutos([{ nome: '', quantidade: '', unidade: '' }])
+        setNewDescriçãoProduto('')
+        setTamanhoQuantidade(1)
       }
     }
   return (
 
     <>
         <div className="add-recipe">
-            <h1>Cadastro de Receitas</h1>
-            <input
-            type="text"
-            placeholder="Digite o nome da receita"
-            value={newReceitaTitulo}
-            onChange={(e) => setNewReceitaTitulo(e.target.value)}
-            />
-            <input
-            type="number"
-            placeholder="Porção para quantas pessoas?"
-            value={tamanhoPorcao}
-            onChange={(e) => setTamanhoPorcao(parseInt(e.target.value))}
-            />
-            <textarea
-            className='modopreparo'
-            rows={5}
-            placeholder="Modo de preparo"
-            value={newInstrucoesReceita}
-            onChange={(e) => setNewInstrucoesReceita(e.target.value)}
-            />
-            <div>
-              <h4>Ingredientes:</h4>
-              {newIngredientesReceita.map((ingredient, index) => (
-                <div key={index}>
+            <h1>Cadastro de Produtos</h1>
+              <div className='receita-porcao'>
+                <div className='receita_2'>
+                  <label htmlFor="nomeReceita">Digite o nome do Produto: </label>
                   <input
-                    type="text"
-                    placeholder="Nome do ingrediente"
-                    value={ingredient.nome}
-                    onChange={(e) => handleIngredientChange(index, 'nome', e.target.value)}
-                  />
-                  <input
-                    type="number"
-                    placeholder="Quantidade"
-                    value={ingredient.quantidade}
-                    onChange={(e) => handleIngredientChange(index, 'quantidade', e.target.value)}
-                  />
-                  <input
-                    type="text"
-                    placeholder="Unidade"
-                    value={ingredient.unidade}
-                    onChange={(e) => handleIngredientChange(index, 'unidade', e.target.value)}
+                  className='nomeReceita'
+                  type="text"
+                  placeholder="Digite o nome do Produto"
+                  value={newReceitaTitulo}
+                  onChange={(e) => setNewReceitaTitulo(e.target.value)}
                   />
                 </div>
-              ))}
-              <button onClick={addIngredientField}>Adicionar Ingrediente</button>
-              <button onClick={adicionarReceitas}>Adicionar Receita</button>
-            </div>
+                <div className='porcao_2'>
+                  <label htmlFor="tamanhoPorcao">Digite a quantidade de Produtos: </label>
+                  <input
+                  className='tamanhoPorcao'
+                  placeholder='EX: 1, 2, 3...'
+                  type="number"
+                  value={tamanhoPorcao}
+                  onChange={(e) => setTamanhoPorcao(parseInt(e.target.value))}
+                  />
+                </div>
+                <button onClick={addIngredientField}>Adicionar Produto</button>
+              </div>
         </div>
     </>
   )

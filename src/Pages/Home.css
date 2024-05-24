@@ -6,16 +6,17 @@
     width: 100%;
 }
 .recipe-list input{
-    background-color: grey;
-    height: 17px;
-    width: 160px;
+    background-color: #ffceff;
+    height: 3rem;
+    width: 20rem;
     margin-top: auto;
-    margin-bottom: 600px;
+    margin-bottom: 700px;
     border-radius: 7px;
-    border: solid 1px black;
-    text-indent: 5%;
+    border: none;
+    text-align: center;
 }
 .recipe-list ::placeholder{
     color: black;
     font-family: SF-Pro-Display-Medium;
+    font-size: 16px;
 }
