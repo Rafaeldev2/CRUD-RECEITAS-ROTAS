@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import './App.css';
-import { ReceitasContextProvider } from './Context/GlobalContext';
+import { ProdutosContextProvider } from './Context/GlobalContext';
 import Header from './Components/Header';
 import Footer from './Components/footer'
 

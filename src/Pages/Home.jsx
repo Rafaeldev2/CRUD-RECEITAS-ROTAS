@@ -8,17 +8,17 @@ import CustomInput from '../Components/CustomInput'
 
 
 const Home = () => {
-  const { receitas, setReceitas } = useContext(ProdutosContext)
+  const { produtos, setProdutos } = useContext(ProdutosContext)
   const [searchQuery, setSearchQuery] = useState('')
 
-  const deletarReceita = (index) => {
-    const atualizarReceitas = [...receitas]
-    atualizarReceitas.splice(index, 1)
-    setReceitas(atualizarReceitas)
+  const deletarProduto = (index) => {
+    const atualizarProdutos = [...produtos]
+    atualizarProdutos.splice(index, 1)
+    setProdutos(atualizarProdutos)
   }
 
   const fracionarReceita = (index, factor) => {
-    const atualizarReceitas = [...receitas]
+    const atualizarProdutos = [...receitas]
     const receitaAtualizada = { ...atualizarReceitas[index] }
 
     receitaAtualizada.ingredientes = receitaAtualizada.ingredientes.map(ingrediente => ({
@@ -30,8 +30,8 @@ const Home = () => {
     setReceitas(atualizarReceitas)
   }
 
-  const receitasFiltradas = receitas.filter(receitas =>
-    receitas.nome.toLowerCase().includes(searchQuery.toLowerCase())
+  const produtosFiltrados = produtos.filter(produtos =>
+    produtos.nome.toLowerCase().includes(searchQuery.toLowerCase())
   )
 
   return (
@@ -42,13 +42,13 @@ const Home = () => {
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
-          {receitasFiltradas.map((receitas, index) => (
+          {produtosFiltrados.map((produtos, index) => (
             <ProductCard 
               key={index} 
               index={index} 
-              receitas={receitas} 
-              deletarReceita={deletarReceita} 
-              fracionarReceita={fracionarReceita} 
+              produtos={produtos} 
+              deletarProduto={deletarProduto} 
+              produtosFiltrados={produtosFiltrados} 
             />
           ))}
       </div>

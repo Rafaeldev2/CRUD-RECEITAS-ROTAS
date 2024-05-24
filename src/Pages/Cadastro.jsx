@@ -1,13 +1,13 @@
 import React from 'react';
 import './Cadastro.css'
 import {useContext, useState} from "react";
-import { ReceitasContext } from '../Context/GlobalContext.jsx';
+import { ProdutosContext } from '../Context/GlobalContext.jsx';
 
 
   function Cadastro() {
     const { produtos, setProdutos } = useContext(ProdutosContext)
-    const [newReceitaTitulo, setNewReceitaTitulo] = useState('')
-    const [NewProdutos, setNewProdutos] = useState([{ nome: '', quantidade: '', unidade: '' }])
+    const [newProdutoTitulo, setNewProdutoTitulo] = useState('')
+    const [NewProdutos, setNewProdutos] = useState([{ nome: '', quantidade: '', valor: '' }])
     const [NewDescriçãoProduto, setNewDescriçãoProduto] = useState('')
     const [tamanhoPorcao, setTamanhoPorcao] = useState(1)
 
@@ -18,7 +18,7 @@ import { ReceitasContext } from '../Context/GlobalContext.jsx';
     }
   
     const addProductField = () => {
-      setNewProdutos([...NewProdutos, { nome: '', quantidade: '', moeda: '' }])
+      setNewProdutos([...NewProdutos, { nome: '', quantidade: '', valor: '' }])
     }
   
     const adicionarProdutos = () => {
@@ -30,8 +30,8 @@ import { ReceitasContext } from '../Context/GlobalContext.jsx';
         }
   
         setProdutos([...setProdutos, NewProdutos])
-        setNewProdutos('')
-        setNewProdutos([{ nome: '', quantidade: '', unidade: '' }])
+        setNewProdutoTitulo('')
+        setNewProdutos([{ nome: '', quantidade: '', valor: '' }])
         setNewDescriçãoProduto('')
         setTamanhoQuantidade(1)
       }
@@ -48,8 +48,8 @@ import { ReceitasContext } from '../Context/GlobalContext.jsx';
                   className='nomeReceita'
                   type="text"
                   placeholder="Digite o nome do Produto"
-                  value={newReceitaTitulo}
-                  onChange={(e) => setNewReceitaTitulo(e.target.value)}
+                  value={newProdutoTitulo}
+                  onChange={(e) => setNewProdutoTitulo(e.target.value)}
                   />
                 </div>
                 <div className='porcao_2'>
@@ -62,7 +62,8 @@ import { ReceitasContext } from '../Context/GlobalContext.jsx';
                   onChange={(e) => setTamanhoPorcao(parseInt(e.target.value))}
                   />
                 </div>
-                <button onClick={addIngredientField}>Adicionar Produto</button>
+                <button onClick={addProductField}>Adicionar Produto</button>
+                <button onClick={adicionarProdutos}>Adicionar Receita</button>
               </div>
         </div>
     </>
@@ -70,3 +71,32 @@ import { ReceitasContext } from '../Context/GlobalContext.jsx';
 }
 
 export default Cadastro
+
+
+{/* <div>
+<h4>Produtos:</h4>
+{novosProdutos.map((produto, index) => (
+  <div key={index}>
+    <input
+      type="text"
+      placeholder="Nome do produto"
+      value={produto.nome}
+      onChange={(e) => handleProductChange(index, 'nome', e.target.value)}
+    />
+    <input
+      type="number"
+      placeholder="Quantidade"
+      value={produto.quantidade}
+      onChange={(e) => handleProductChange(index, 'quantidade', e.target.value)}
+    />
+    <input
+      type="text"
+      placeholder="Unidade"
+      value={produto.unidade}
+      onChange={(e) => handleProductChange(index, 'unidade', e.target.value)}
+    />
+  </div>
+))}
+<button onClick={addProductField}>Adicionar Produto</button>
+<button onClick={adicionarProdutos}>Adicionar Produtos</button>
+</div> */}
