@@ -4,72 +4,72 @@ import {useContext, useState} from "react";
 import { ProdutosContext } from '../Context/GlobalContext.jsx';
 
 
-  function Cadastro() {
-    const { produtos, setProdutos } = useContext(ProdutosContext)
-    const [newProdutoTitulo, setNewProdutoTitulo] = useState('')
-    const [NewProdutos, setNewProdutos] = useState([{ nome: '', quantidade: '', valor: '' }])
-    const [NewDescriçãoProduto, setNewDescriçãoProduto] = useState('')
-    const [tamanhoPorcao, setTamanhoPorcao] = useState(1)
+function Cadastro() {
+  const { produtos, setProdutos } = useContext(ProdutosContext)
+  const [newProdutoTitulo, setNewProdutoTitulo] = useState('')
+  const [newUnidadeProdutos, setNewUnidadeProdutos] = useState([{ nome: '', quantidade: '', valor: '' }])
+  const [newDescriçãoProduto, setNewDescriçãoProduto] = useState('')
+  const [quantidadeProduto, setQuantidadeProduto] = useState(1)
 
-    const handleProductChange = (index, field, value) => {
-      const atualizarProdutos = [...NewProdutos]
-      atualizarProdutos[index][field] = value
-      setNewProdutos(atualizarProdutos)
-    }
-  
-    const addProductField = () => {
-      setNewProdutos([...NewProdutos, { nome: '', quantidade: '', valor: '' }])
-    }
-  
-    const adicionarProdutos = () => {
-      if (newProdutoTitulo.trim() !== '') {
-        const NewProdutos = {
-          nome: newProdutoTitulo.trim(),
-          produtos: NewProdutos,
-          descriçãoProduto: NewDescriçãoProduto.trim()
-        }
-  
-        setProdutos([...setProdutos, NewProdutos])
-        setNewProdutoTitulo('')
-        setNewProdutos([{ nome: '', quantidade: '', valor: '' }])
-        setNewDescriçãoProduto('')
-        setTamanhoQuantidade(1)
+  const handleProductChange = (index, field, value) => {
+    const atualizarProdutos = [...newUnidadeProdutos]
+    atualizarProdutos[index][field] = value
+    setNewUnidadeProdutos(atualizarProdutos)
+  }
+
+  const addProductField = () => {
+    setNewUnidadeProdutos([...newUnidadeProdutos, { nome: '', quantidade: '', valor: '' }])
+  }
+
+  const adicionarProdutos = () => {
+    if (newProdutoTitulo.trim() !== '') {
+      const newProduto = {
+        nome: newProdutoTitulo.trim(),
+        quantidade: quantidadeProduto,
+        descriçãoProduto: newDescriçãoProduto.trim()
       }
+
+      setProdutos([...produtos, newProduto])
+      setNewProdutoTitulo('')
+      setNewUnidadeProdutos([{ nome: '', quantidade: '', valor: '' }])
+      setNewDescriçãoProduto('')
+      setQuantidadeProduto(1)
     }
+  }
   return (
 
     <>
         <div className="add-recipe">
-            <h1>Cadastro de Produtos</h1>
-              <div className='receita-porcao'>
-                <div className='receita_2'>
-                  <label htmlFor="nomeReceita">Digite o nome do Produto: </label>
-                  <input
-                  className='nomeReceita'
-                  type="text"
-                  placeholder="Digite o nome do Produto"
-                  value={newProdutoTitulo}
-                  onChange={(e) => setNewProdutoTitulo(e.target.value)}
-                  />
-                </div>
-                <div className='porcao_2'>
-                  <label htmlFor="tamanhoPorcao">Digite a quantidade de Produtos: </label>
-                  <input
-                  className='tamanhoPorcao'
-                  placeholder='EX: 1, 2, 3...'
-                  type="number"
-                  value={tamanhoPorcao}
-                  onChange={(e) => setTamanhoPorcao(parseInt(e.target.value))}
-                  />
-                </div>
-                {NewProdutos.map((produtos, index) => (
-                <div key={index}>
-                  
-                </div>
-                ))}
-                <button onClick={addProductField}>Adicionar Produto</button>
-                <button onClick={adicionarProdutos}>Adicionar Receita</button>
+          <h1>Cadastro de Produtos</h1>
+            <div className='receita-porcao'>
+              <div className='receita_2'>
+                <label htmlFor="nomeReceita">Digite o nome do Produto: </label>
+                <input
+                className='nomeReceita'
+                type="text"
+                placeholder="Digite o nome do Produto"
+                value={newProdutoTitulo}
+                onChange={(e) => setNewProdutoTitulo(e.target.value)}
+                />
               </div>
+              <div className='porcao_2'>
+                <label htmlFor="tamanhoPorcao">Digite a quantidade de Produtos: </label>
+                <input
+                className='tamanhoPorcao'
+                placeholder='EX: 1, 2, 3...'
+                type="number"
+                value={tamanhoPorcao}
+                onChange={(e) => setTamanhoPorcao(parseInt(e.target.value))}
+                />
+              </div>
+              {NewProdutos.map((produtos, index) => (
+              <div key={index}>
+                
+              </div>
+              ))}
+              <button onClick={addProductField}>Adicionar Produto</button>
+              <button onClick={adicionarProdutos}>Adicionar Receita</button>
+            </div>
         </div>
     </>
   )
